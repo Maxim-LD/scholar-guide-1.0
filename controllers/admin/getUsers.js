@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
-const { asyncHandler } = require("../../middlewares/errorHandler");
-const Users = require("../../models/User");
+const { asyncHandler } = require("../../middlewares/errorHandler")
+const Users = require("../../models/User")
 
 const listUsers = asyncHandler(async (req, res) => {
     const id = req.params.id
