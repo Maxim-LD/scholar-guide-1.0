@@ -11,17 +11,13 @@ const generateToken = (user) => {
         }
     }
 
-    const options = { expiresIn: "120m" }
+    const options = { expiresIn: "2m" }
 
     return jwt.sign(payload, secretKey, options)
 }
 
 const verifyToken = (token) => {
-    try {
-        return jwt.verify(token, secretKey)
-    } catch (error) {
-        return error.message
-    }
+    return jwt.verify(token, secretKey)
 }
 
 module.exports = {
