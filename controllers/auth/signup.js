@@ -1,3 +1,5 @@
+const bcrypt = require('bcryptjs')
+const Users = require('../../models/User')
 const { asyncHandler } = require("../../middlewares/errorHandler")
 
 const signup = asyncHandler(async (req, res) => {
